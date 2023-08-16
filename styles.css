@@ -115,7 +115,8 @@ nav ul a:hover:after{
 }
 
 /*QUERIES*/
-@media (max-width: 768px) {
+
+@media (max-width: 992px) {
     header {
       flex-direction: column;
       align-items: center;
@@ -129,7 +130,7 @@ nav ul a:hover:after{
     }
   
     .logo h1 {
-      font-size: 4rem;
+      font-size: 6rem;
     }
   
     nav {
@@ -138,13 +139,24 @@ nav ul a:hover:after{
   
     nav ul {
       flex-direction: column;
-      align-items: center;
       max-width: 100%;
+      background-color: var(--rosa_dark);
     }
+
+    nav ul li{
+        border-bottom: 0.1rem solid var(--negro);
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem
+        
+    }
+
+    nav ul li a{
+        font-size: 2.5rem;
+        
+    }
+    
   
-    nav ul li {
-      margin: 10px 0;
-    }
   }
 
 
@@ -188,13 +200,24 @@ nav ul a:hover:after{
 
 @media (max-width:992px) {
   .principal .principal_text h3{
-    font-size: 2.5rem;
+    font-size: 3.1rem;
   }
-
-  
-
   .principal img{
     display: none;
+  }
+  .fondo_main{
+    background-color: var(--blanco);
+  }
+  .principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30rem;
+  }
+
+  .principal .principal_text{
+    padding-right: 0;
+    max-width: 50%;
   }
 }
 
@@ -317,6 +340,25 @@ nav ul a:hover:after{
 }
 .button_project:hover{
     background-color: var(--rosa_dark);
+}
+
+@media (max-width: 992px) {
+   .content_project{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+   }
+
+   .project{
+    max-width: 60rem;
+    margin-bottom: 2rem;
+   }
+
+   .proyectos h2{
+    font-size: 4rem;
+    text-align: center;
+   }
+
 }
 
 
@@ -443,11 +485,30 @@ flex-direction: column;
     font-family: var(--parrafos);
     font-size: 2rem;
 }
+@media (max-width:992px) {
+  .conocimientos h2{
+    font-size: 4rem;
+    text-align: center;
+  }
 
+  .acordion_tab_wrapper{
+    display: grid;
+  }
+  .acordion_tab_group{
+    grid-area:2 / 1 / 3 / 2
+  }
+  .acordion_tab_content{
+    grid-area: 1 / 3 / 2 / 4;
 
-@media (min-width:480px) {
-  
+  }
+
+  .acordion_tab_contents{
+    height: 25rem;
+  }
+
 }
+
+
 
 /*FIN CONOCIMIENTOS*/
 
@@ -552,3 +613,15 @@ flex-direction: column;
     
   }
 
+@media (max-width:1200px) {
+ .contact_image{
+    display: none;
+ }
+ .contact_text{
+    width: 70%;
+ }
+
+ .contact_text p{
+    padding: 0 6rem
+ }
+}
