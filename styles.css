@@ -10,6 +10,8 @@
 
     --titulo: 'Chakra Petch', sans-serif;
     --parrafos: 'Itim', cursive;
+
+    --titulo_600:4rem;
 }
 *{
     padding: 0;
@@ -262,14 +264,16 @@ nav ul a:hover:after{
 }
 
 .content_project{
-    display: flex;
-    justify-content: space-around;
+    
     margin-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
 }
 .project{
     background-color: var(--blanco);
-    max-width: 40rem;
+    width: 30%;
     border-radius: 2rem;
     border: 0.3rem solid var(--plomo);
     
@@ -343,14 +347,9 @@ nav ul a:hover:after{
 }
 
 @media (max-width: 992px) {
-   .content_project{
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-   }
 
    .project{
-    max-width: 60rem;
+    width: 40%;
     margin-bottom: 2rem;
    }
 
@@ -359,6 +358,16 @@ nav ul a:hover:after{
     text-align: center;
    }
 
+}
+
+@media (max-width:600px) {
+    .project{
+        width: 90%;
+    }
+    .h2{
+        font-size: var(--titulo_600)
+    }
+  
 }
 
 
@@ -467,18 +476,20 @@ flex-direction: column;
 }
 
 /*contenido*/
-.img_tab_web{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    margin: 2rem;
-}
+
 .img_tab_web img{
-    width: 11rem;
+    width: 28%;
     border-radius: 100%;
     border: 0.5rem solid var(--rosa_dark);
+    margin-bottom: 10px;
+
 }
+.acordion_tab_content .img_tab_web {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 
 .acordion_tab_contents .acordion_tab_content{
     display: none;
@@ -503,9 +514,30 @@ flex-direction: column;
   }
 
   .acordion_tab_contents{
-    height: 25rem;
+    height: auto;
   }
 
+  .img_tab_web img{
+    width: 30%;
+  }
+
+}
+@media (max-width:600px) {
+    .conocimientos{
+        padding: 1rem;
+    }
+
+    .conocimientos h2{
+        font-size: var(--titulo_600);
+    }
+    
+    .img_tab_web img {
+        width: 38%; /* Establece el ancho de cada imagen al 48% para dos columnas en dispositivos móviles */
+        margin-bottom: 10px; /* Añade espacio entre las imágenes */
+    }
+    .acordion_tab_contents{
+        width: 90%;
+    }
 }
 
 
@@ -625,3 +657,26 @@ flex-direction: column;
     padding: 0 6rem
  }
 }
+
+@media (max-width:710px) {
+    .contact_image{
+       display: none;
+    }
+    .contact_text{
+       width: 90%;
+       padding: 1rem;
+    }
+    .contact_text p{
+        padding: 1rem;
+    }
+
+    .contact_text h3{
+        margin: 2rem;
+    }
+    .contacto{
+        padding: 2rem 0;
+    }
+
+    .contact .button{
+        margin-bottom: 1rem;
+    }}
