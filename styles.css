@@ -223,6 +223,13 @@ nav ul a:hover:after{
   }
 }
 
+@media (max-width:600px) {
+    .principal .principal_text{
+        max-width: 80%;
+      }
+  
+}
+
 /*FIN PRINCIPAL*/
 
 /*PROYECTOS*/
