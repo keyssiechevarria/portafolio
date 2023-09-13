@@ -242,6 +242,13 @@ nav ul a:hover:after{
 
 /*PROYECTOS*/
 
+.project{
+    border: 0.3rem solid var(--plomo);
+    background-color: var(--blanco);
+    border-radius: 2rem;
+    margin-top: 2rem;
+   }
+
 .project .puntos{
     display: flex;
     justify-content: space-between;
@@ -373,7 +380,11 @@ nav ul a:hover:after{
     text-align: center;
    }
 
+
+
+
 }
+
 
 @media (max-width:600px) {
     .project{
