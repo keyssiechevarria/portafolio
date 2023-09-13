@@ -63,15 +63,19 @@ header{
     width: 30%;
     
 }
-.logo h1 a{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    -webkit-text-stroke: 0.5px black;
-    color: #FA0001;
-    font-size: 6rem;
+.logo h1 {
     text-align: center;
+}
+
+.logo h1 a{
     text-decoration: none;
-    
+    color: #FA0001;
+    -webkit-text-stroke: 0.5px black;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+
+
 }
 
 
@@ -282,12 +286,12 @@ nav ul a:hover:after{
     justify-content: space-around;
     
 }
-.project{
-    background-color: var(--blanco);
-    width: 30%;
-    border-radius: 2rem;
-    border: 0.3rem solid var(--plomo);
-    
+
+@media (max-width:900px) {
+    .proyect{
+        width: 45%;
+    }
+  
 }
 .project h4{
     font-family: var(--titulo);

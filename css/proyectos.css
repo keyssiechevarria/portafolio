@@ -1,0 +1,328 @@
+:root{
+    --verde :#6FDCBF;
+    --morado:#DDD0EA;
+    --amarillo: #FEF8B4;
+    --rosa: #F2C3C0;
+    --rosa_dark:#FFADAD;
+    --negro: #25171A;
+    --plomo: #404040;
+    --blanco: #F7F7F7;
+
+    --titulo: 'Chakra Petch', sans-serif;
+    --parrafos: 'Itim', cursive;
+
+    --titulo_600:4rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*rem*/
+html {
+    
+    font-size: 62.5%;
+    }
+body{
+    font-size: 16px;
+    background-color: var(--blanco);
+}
+
+/*Fin REM*/
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    height: 10rem;
+} 
+
+.logo{
+    width: 30%;
+    
+}
+.logo h1 {
+    text-align: center;
+}
+
+.logo h1 a{
+    text-decoration: none;
+    color: var(--verde);
+    -webkit-text-stroke: 0.5px black;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+
+
+}
+
+
+
+nav{
+    width: 60%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    max-width: 70%;
+    
+}
+
+nav ul a{
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    font-weight: 300;
+    color: #25171A;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+    
+}
+nav ul a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    background-color: #25171A;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-out;
+}
+ 
+nav ul a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*QUERIES*/
+
+@media (max-width: 992px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 20px 0;
+    }
+  
+    .logo {
+      width: auto;
+      margin-bottom: 10px;
+    }
+  
+    .logo h1 {
+      font-size: 6rem;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      max-width: 100%;
+      background-color: var(--rosa_dark);
+    }
+
+    nav ul li{
+        border-bottom: 0.1rem solid var(--negro);
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem
+        
+    }
+
+    nav ul li a{
+        font-size: 2.5rem;
+        
+    }
+    nav ul a:after {
+        display: none; /* Oculta los estilos en dispositivos móviles */
+      }
+    
+  
+  }
+
+
+/*FIN HEADER*/
+
+/*PROYECTOS*/
+h2{
+    font-family: var(--titulo);
+    color: var(--plomo);
+    font-size: 5rem;
+    margin-bottom: 5rem;
+
+}
+.content_proyect{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.proyect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    width: 30%;
+    margin-bottom: 4rem;
+    background-color: #fff;
+}
+
+.image_proyect {
+    width: 100%; /* Establece el ancho deseado para tu div */
+    height: 20rem; /* Establece la altura deseada para tu div */
+    background-image: url('../img/proyect.jpg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Puedes ajustar esta propiedad según tus necesidades */
+    border-radius: 1.5rem;  
+    background-color: var(--blanco);
+    
+}
+
+
+.image_proyect:hover{
+    filter: opacity(100%)
+}
+section{
+    padding: 5rem;
+}
+.proyect{
+    position: relative;
+}
+
+.type_proyect{
+    text-align: center;
+    width: 60%;
+    padding: 1rem;
+    position: absolute;
+    top: 45%;
+}
+.type_proyect p{
+    font-size: 1.8rem;
+    font-family: var(--parrafos);
+}
+
+.description_proyect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.description_proyect .title{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: var(--titulo);
+    color: var(--plomo);
+    margin-top: 3rem;
+
+}
+.description_proyect p{
+    font-family: var(--parrafos);
+    max-width: 70%;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.button_proyect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.button_proyect a{
+    text-decoration: none;
+    color: var(--negro);
+    font-family: var(--parrafos);
+    font-weight: 500;
+}
+
+.flecha{
+    color: var(--negro);
+    width: 2rem;
+}
+/*FIN PROYECTOS*/
+
+/*Diseño*/
+.proyect .image_diseno{
+    border: 0.5rem solid var(--rosa);
+}
+
+.type_diseno{
+    background-color: var(--rosa);
+
+
+}
+
+/*Gestion*/
+.proyect .image_gestion{
+    border: 0.5rem solid var(--amarillo);
+
+}
+
+.type_gestion{
+    background-color: var(--amarillo);
+
+}
+
+/*Desarrollo web*/
+.image_web{
+    border: 0.5rem solid var(--verde);
+
+}
+
+.type_web{
+    background-color: var(--verde);
+}
+
+
+/*Analisis de datos*/
+
+.proyect .image_datos{
+    border: 0.5rem solid var(--morado);
+
+
+}
+
+.type_datos{
+    background-color: var(--morado);
+
+}
+
+
+@media (max-width:1200px) {
+    .proyect{
+        width: 45%;
+    }
+    .type_proyect{
+        max-width: 70%;
+    }
+    
+}
+@media (max-width:800px) {
+    .proyect{
+        width: 70%;
+    }
+    h2{
+        font-size: var(--titulo_600);
+    }
+  
+}
+@media (max-width:500px) {
+    .proyect{
+        width: 100%;
+    }
+}
