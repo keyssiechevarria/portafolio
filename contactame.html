@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/vnd.icon" href="logo.ico">
     <title>Contactame</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/contactame.css">
 
     <!--Fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,5 +33,39 @@
         </header>
         <!--FIN BARRA DE NAVEGACIÓN-->
     </div>
+    <section class="contacto">
+        <div class="contact_text">
+            <div class="hello_contact">
+                <p class="title">¡Hola!</p>
+                <p class="subject">Me alegra tenerte aquí :)</p>
+            </div>
+            <div class="form_contact">
+                <form id="registro-form">
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="miTexto">Asunto</label>
+                        <textarea name="textarea" rows="10" cols="50">Quiero mi página web</textarea>    
+                    </div>
+                    <div class="button">
+                        <button class= button_project type="submit">Enviar</button>
+                    </div>
+                 
+                </form>
+            </div>
+
+        </div>
+        <div class="contact_image">
+            <img src="img/contact me.png" alt="">
+        </div>
+        
+
+    </section>
 </body>
 </html>
