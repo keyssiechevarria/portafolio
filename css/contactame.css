@@ -229,7 +229,17 @@ input, textarea{
     color: var(--plomo);
     
 }
+.contact_mobile{
+    display: none;
+}
 @media (max-width: 768px) {
+    .contact_mobile{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
     .contacto {
         grid-template-columns: 1fr;
     }
